@@ -1,0 +1,26 @@
+﻿# Java / Maven
+backend/target/
+*.class
+*.jar
+
+# Node / Angular
+frontend/node_modules/
+frontend/.angular/
+frontend/dist/
+npm-debug.log*
+
+# Local files and generated scratch data
+.env
+!.env.example
+*.log
+tmp/
+.DS_Store
+Thumbs.db
+
+# Local IDE settings and OS credentials
+.idea/
+.vscode/
+*.pem
+*.key
+*.p12
+*.jks

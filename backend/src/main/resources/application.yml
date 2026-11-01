@@ -1,0 +1,21 @@
+spring:
+  config:
+    import: "optional:file:../.env[.properties],optional:file:.env[.properties]"
+  datasource:
+    url: ${DB_URL:jdbc:oracle:thin:@//localhost:1521/XEPDB1}
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+    driver-class-name: oracle.jdbc.OracleDriver
+  jpa:
+    hibernate:
+      ddl-auto: update        # creates/updates tables automatically on first run
+    open-in-view: false
+server:
+  port: 8081
+  error:
+    include-message: always
+app:
+  cors-origin: ${CORS_ORIGIN:http://localhost:4200}
+  jwt:
+    secret: ${JWT_SECRET}
+    expiration-ms: ${JWT_EXPIRATION_MS:86400000}
